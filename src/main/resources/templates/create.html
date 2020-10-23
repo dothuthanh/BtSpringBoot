@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Createn laptop</title>
+</head>
+<body>
+<h1>Create laptop</h1>
+<p>
+    <a href="/laptops">Laptop list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/create}" th:object="${laptop}" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>Price</td>:</td>
+            <td><input type="text" th:field="*{price}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create laptop"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
