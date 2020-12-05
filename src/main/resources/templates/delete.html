@@ -8,9 +8,9 @@
 <h1>Delete Lap Top</h1>
 <h2>Are you sure?</h2>
 <p>
-    <a href="/laptops">Lap Top list</a>
+    <a href="/admin">Lap Top list</a>
 </p>
-<form th:action="@{/delete}" th:object="${laptop}" method="post">
+<form th:action="@{/admin/delete}" th:object="${laptop}" method="post">
     <input th:type="hidden" name="id" th:field="*{id}">
     <table >
         <tr>

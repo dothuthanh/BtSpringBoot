@@ -7,12 +7,12 @@
 <body>
 <h1>Edit Lap TOp</h1>
 <p>
-    <a href="/laptops">LapTop list</a>
+    <a href="/admin">LapTop list</a>
 </p>
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
-<form th:action="@{/edit}" th:object="${laptop}" method="post">
+<form th:action="@{/admin/edit}" th:object="${laptop}" method="post">
     <input th:type="hidden" name="id" th:field="*{id}">
     <table>
         <tr>

@@ -5,21 +5,17 @@
     <title>Lap </title>
 </head>
 <body>
-<a href="/admin/create">Create new Lap top</a>
+<!--<a href="/user/create">Create new Lap top</a>-->
 <h1>Lap Top</h1>
 <table border="1">
     <tr>
         <th>Name</th>
         <th>Price</th>
-        <th>Edit</th>
-        <th>Delete</th>
     </tr>
     <th:block th:each="laptop: ${laptops}">
         <tr>
             <td th:text="${laptop.name}"></td>
             <td th:text="${laptop.price}"></td>
-            <td><a th:href="@{/admin/edit/__${laptop.id}__ }">Edit</a></td>
-            <td><a th:href="@{/admin/delete/__${laptop.id}__ }">Delete</a></td>
         </tr>
     </th:block>
 </table>

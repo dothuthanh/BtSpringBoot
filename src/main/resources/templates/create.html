@@ -7,12 +7,12 @@
 <body>
 <h1>Create laptop</h1>
 <p>
-    <a href="/laptops">Laptop list</a>
+    <a href="/admin">Laptop list</a>
 </p>
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
-<form th:action="@{/create}" th:object="${laptop}" method="post" enctype="multipart/form-data">
+<form th:action="@{/admin/create}" th:object="${laptop}" method="post" enctype="multipart/form-data">
     <table>
         <tr>
             <td>Name:</td>

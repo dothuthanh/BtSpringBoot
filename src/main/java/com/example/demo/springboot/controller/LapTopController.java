@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Optional;
 
 @Controller
+@RequestMapping("/admin")
 public class LapTopController {
     @Autowired
     private IService service;
@@ -35,13 +36,12 @@ public class LapTopController {
 //        if (optionalStudent.isPresent()) return new ResponseEntity<>(service.save(lapTop), HttpStatus.OK);
 //        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 //    }
-    @GetMapping("/laptops")
+    @GetMapping("")
     public ModelAndView list() {
         ModelAndView modelAndView = new ModelAndView("listlaptop");
         modelAndView.addObject("laptops", service.findAll());
         return modelAndView;
     }
-
     @GetMapping("/create")
     public ModelAndView createShow() {
         ModelAndView modelAndView = new ModelAndView("create");

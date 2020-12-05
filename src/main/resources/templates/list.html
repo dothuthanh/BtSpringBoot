@@ -6,7 +6,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>Danh sach LapTop</h1>
+<h1 id="haha" onclick="haha()">Danh sach LapTop</h1>
 <table border="1px">
     <tr>
         <th>Name</th>
@@ -21,6 +21,10 @@
     </th:block>
 </table>
 <script>
+    function haha() {
+        document.getElementById("haha").style.color ="red";
+    }
+
     function edit(a) {
         let name = prompt("Moi ban nhap ten");
         let price = prompt("Gia tien");
